@@ -11,17 +11,24 @@ import Alamofire
 
 class ViewController: UIViewController {
 
-    @IBAction func postbutton(_ sender: Any) {
     
-          let parameters:[String: Any] = [
-         "data": 1
+    
+    
+    @IBOutlet weak var textField: UITextField!
+    
+    @IBAction func postbutton(_ sender: Any) {          //ボタンを押した時の動作
+        var t = textField.text!                        //！をつけないとoptional型になる
+        
+        let parameters:[String: Any] = [              //サーバにPOSTするデータ
+            "data":t
          ]
          
-         Alamofire.request("http://localhost/r.php", method: .post ,parameters: parameters)
-         
-         
+         Alamofire.request("http://localhost/r.php", method: .post ,parameters: parameters) //HTTPリクエスト
+    
     
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
