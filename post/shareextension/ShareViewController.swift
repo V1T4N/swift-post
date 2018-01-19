@@ -41,7 +41,14 @@ class ShareViewController: SLComposeServiceViewController {
                 if let url: NSURL = item as? NSURL {
                     
                     
-    
+                    let data = [              // サーバにPOSTするデータ(id,url)
+                        "id":"12345",
+                        "url":"aaa"
+                        
+                        ]
+                    
+                    Alamofire.request("http://localhost/r2.php", method: .post ,parameters: data) //HTTPリクエスト
+                  
                     
                    
                     

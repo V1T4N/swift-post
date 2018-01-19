@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     
     
     
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var idtextfield: UITextField!
+    @IBOutlet weak var passtextfield: UITextField!
     
     @IBAction func postbutton(_ sender: Any) {          //ボタンを押した時の動作
        
@@ -27,14 +28,22 @@ class ViewController: UIViewController {
             //UIApplication.shared.open(URL(string: url)!)
             
             
-            let data = [              // サーバにPOSTするデータ(id,url)
-                "id":"12345",
+            let data:[String:String] = [              // サーバにPOSTするデータ(id,url)
+                "id":idtextfield.text!,
+                "pass":passtextfield.text!,
                 "url":url
                 
             ]
 
             Alamofire.request("http://localhost/r2.php", method: .post ,parameters: data) //HTTPリクエスト
-            textField.text = url
+            
+            
+            
+            
+            
+            
+            
+            
             
             // データの削除
             sharedDefaults.removeObject(forKey: self.keyName)
