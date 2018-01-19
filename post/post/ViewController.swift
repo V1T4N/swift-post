@@ -27,7 +27,7 @@ class ViewController: UIViewController {
             //UIApplication.shared.open(URL(string: url)!)
             
             
-            let data = [              //サーバにPOSTするデータ
+            let data = [              // サーバにPOSTするデータ
                 "id":"12345",
                 "url":url
                 
