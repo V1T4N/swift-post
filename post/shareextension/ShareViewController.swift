@@ -26,11 +26,7 @@ class ShareViewController: SLComposeServiceViewController {
     
         // Inform the host that we're done, so it un-blocks its UI. Note: Alternatively you could call super's -didSelectPost, which will similarly complete the extension context.
         
-        let parameters:[String: Any] = [              //サーバにPOSTするデータ
-            "data":1
-        ]
-        
-        Alamofire.request("http://localhost/r.php", method: .post ,parameters: parameters) //HTTPリクエスト
+       
         
         
         let inputItem: NSExtensionItem = self.extensionContext?.inputItems[0] as! NSExtensionItem
@@ -44,6 +40,9 @@ class ShareViewController: SLComposeServiceViewController {
                 // NSURLを取得する
                 if let url: NSURL = item as? NSURL {
                     
+                    
+    
+                    
                    
                     
                     // ----------
@@ -56,6 +55,8 @@ class ShareViewController: SLComposeServiceViewController {
             })
         }
         
+        
+       
         
         
         self.extensionContext!.completeRequest(returningItems:[], completionHandler: nil)
