@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "post/ViewController.swift"
-            timestampString = "538382141.423974"
+            timestampString = "538397885.781392"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "postbutton(_:)"
             landmarkType = "7">
          </BreakpointContent>
