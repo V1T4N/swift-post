@@ -27,9 +27,10 @@ class ViewController: UIViewController {
             // Safari を起動してそのURLに飛ぶ
             //UIApplication.shared.open(URL(string: url)!)
             
+            let uuidString = UUID().uuidString
             
             let data:[String:String] = [              // サーバにPOSTするデータ(id,url)
-                "id":idtextfield.text!,
+                "id":uuidString,                        //uidtextfield.text!,
                 "pass":passtextfield.text!,
                 "url":url
                 
