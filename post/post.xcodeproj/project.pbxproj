@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		844BE68720177AC400CEEFED /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BE68620177AC400CEEFED /* ViewController2.swift */; };
 		847C22B51FF6A92900E9A728 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84ABE05C1FF3A3DE001ED5FB /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84ABE0231FF3A361001ED5FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABE0221FF3A361001ED5FB /* AppDelegate.swift */; };
 		84ABE0251FF3A361001ED5FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABE0241FF3A361001ED5FB /* ViewController.swift */; };
@@ -139,6 +140,7 @@
 
 /* Begin PBXFileReference section */
 		840777FA1FF69C59006EB2FE /* shareextension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = shareextension.entitlements; sourceTree = "<group>"; };
+		844BE68620177AC400CEEFED /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		84ABE01F1FF3A361001ED5FB /* post.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = post.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84ABE0221FF3A361001ED5FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84ABE0241FF3A361001ED5FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				84F530B31FF629D400C1B4CF /* post.entitlements */,
 				84ABE0221FF3A361001ED5FB /* AppDelegate.swift */,
 				84ABE0241FF3A361001ED5FB /* ViewController.swift */,
+				844BE68620177AC400CEEFED /* ViewController2.swift */,
 				84ABE0261FF3A361001ED5FB /* Main.storyboard */,
 				84ABE0291FF3A361001ED5FB /* Assets.xcassets */,
 				84ABE02B1FF3A361001ED5FB /* LaunchScreen.storyboard */,
@@ -523,6 +526,7 @@
 			files = (
 				84ABE0251FF3A361001ED5FB /* ViewController.swift in Sources */,
 				84ABE0231FF3A361001ED5FB /* AppDelegate.swift in Sources */,
+				844BE68720177AC400CEEFED /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

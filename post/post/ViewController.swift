@@ -15,33 +15,11 @@ class ViewController: UIViewController {
     let suiteName: String = "group.com.test.post"
     let keyName: String = "shareData"
     
-    var uuidString:String = "a"
-    
-    @IBOutlet weak var idtextfield: UITextField!
-    @IBOutlet weak var passtextfield: UITextField!
-    
-   
-    @IBAction func save(_ sender: Any) {            //保存ボタンを押した時の動作
-    
-        let userDefaults = UserDefaults.standard
-        UserDefaults.standard.set(uuidString, forKey: "UUID")
-        UserDefaults.standard.set(passtextfield.text, forKey: "PASS")
-        userDefaults.synchronize()
-        
-    }
+    var uuidString = ""
+    var pass = ""
     
     
-    @IBAction func getuuid(_ sender: Any) { //UUID取得ボタンを押した時の動作
-    
-        uuidString = UUID().uuidString //UUID生成
-        
-        idtextfield.text = uuidString //idtextfieldを更新
-    }
-    
-    
-    
-    
-    
+    @IBOutlet weak var idlabel: UILabel!
     
     @IBAction func postbutton(_ sender: Any) {          //ボタンを押した時の動作
        
@@ -54,7 +32,7 @@ class ViewController: UIViewController {
             
             let data:[String:String] = [              // サーバにPOSTするデータ(id,url)
                 "id":uuidString,                        //uidtextfield.text!,
-                "pass":passtextfield.text!,
+                "pass":pass,
                 "url":url
                 
             ]
@@ -73,9 +51,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() { //アプリがメモリ上に読み込まれた時に実行される関数
         super.viewDidLoad()
         
-         idtextfield.text = UserDefaults.standard.string(forKey: "UUID") //UserDefaultsに保存されたUUIDとPASSをtextfieldに表示
-         passtextfield.text = UserDefaults.standard.string(forKey: "PASS")
         
+         uuidString = UserDefaults.standard.string(forKey: "UUID")!//UserDefaultsに保存されたUUIDとPASSをtextfieldに表示
+         pass = UserDefaults.standard.string(forKey: "PASS")!
+         idlabel.text = uuidString
     }
 
     override func didReceiveMemoryWarning() {
